@@ -1,10 +1,10 @@
 <?php
-function connexion($pseudo,$passwd){
+function connexion($pseudo){
   global $bdd;
-  $reponse = $bdd->prepare('SELECT pseudo, passwd FROM membre WHERE pseudo = :pseudo AND passwd = :passwd');
+  $reponse = $bdd->prepare('SELECT pseudo, passwd FROM membre WHERE pseudo = :pseudo');
   $reponse->execute(array(
-'pseudo' => htmlspecialchars($pseudo),
-'passwords' => sha1($passwd)
+'pseudo' => $pseudo,
+// 'passwd' => $passwd
 ));
 
 $connexion = $reponse->fetch();

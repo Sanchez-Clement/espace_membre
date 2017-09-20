@@ -42,7 +42,7 @@ header("Location: ../index.php" );
   $target_file = "../img/" .$_FILES['avatar']['name'] ;
 
   move_uploaded_file($_FILES['avatar']['tmp_name'], $target_file);
-  // header("Location: ../index.php" );
+  header("Location: ../index.php" );
 }
 
 // header("Location: index.php" );
