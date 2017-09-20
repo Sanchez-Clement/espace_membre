@@ -1,5 +1,5 @@
 <?php
-function updateProfil() {
+function updateProfil($nvpseudo,$nvpasswd,$nvmail,$nvsignature) {
   global $bdd;
   $req = $bdd->prepare('UPDATE membre SET pseudo = :nvpseudo, passwd = :nvpasswd, mail = :nvmail, signature = :nvsignature WHERE id = :idmembre');
 $req->execute(array(
