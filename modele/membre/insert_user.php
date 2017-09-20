@@ -1,13 +1,14 @@
 <?php
 
+
 function insert_user($pseudo,$passw,$mail,$signature) {
   global $bdd;
-  $req = $bdd->prepare('INSERT INTO membre (pseudo, passw, mail, signature,date_inscription) VALUES(:pseudo, :passw, :mail, :signature, CURDATE())');
+  $req = $bdd->prepare('INSERT INTO membre (pseudo, passwd, mail, signature,date_inscription) VALUES(:pseudo, :passwd, :mail, :signature, CURDATE())');
   $req->execute(array(
-  'pseudo' => htmlspecialchars($pseudo),
-  'passw' => sah1($passw),
-  'mail' => htmlspecialchars($mail) ,
-  'signature' => htmlspecialchars($signature),
+  'pseudo' => $pseudo ,
+  'passwd' => $passw,
+  'mail' => $mail ,
+  'signature' => $signature,
 
 
   ));
