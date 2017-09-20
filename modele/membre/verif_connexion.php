@@ -10,4 +10,3 @@ $connexion = $reponse->fetch();
 
 return $connexion;
 }
- ?>
