@@ -5,7 +5,7 @@ function insert_user($pseudo,$passw,$mail,$signature) {
   $req = $bdd->prepare('INSERT INTO membre (pseudo, passw, mail, signature,date_inscription) VALUES(:pseudo, :passw, :mail, :signature, CURDATE())');
   $req->execute(array(
   'pseudo' => htmlspecialchars($pseudo),
-  'passw' => htmlspecialchars($passw),
+  'passw' => sah1($passw),
   'mail' => htmlspecialchars($mail) ,
   'signature' => htmlspecialchars($signature),
 
