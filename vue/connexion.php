@@ -1,3 +1,4 @@
+
 <form class="col s12 m6 center-align card" action="controleur/connexion_post.php" method="post">
 <div class="input-field">
   <label for="pseudo">Pseudo</label>
@@ -15,6 +16,6 @@
 </div>
 <input  class="btn" type="submit" name="" value="Se connecter">
 <div class="card-action">
-  <a href="addUser.php">Pas encore inscrit ?</a>
+  <a href="index.php?section=adduser">Pas encore inscrit ?</a>
 </div>
 </form>

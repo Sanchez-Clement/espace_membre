@@ -3,9 +3,13 @@
 <?php  include 'modele/connexion_sql.php';?>
 
 <?php
-if (!isset($_SESSION["pseudo"])) {
-include 'vue/connexion.php';
+if(isset($_GET['section']) && $_GET['section']=="adduser"){
+
+  include 'vue/addUser.php';
 } else {
-include 'vue/profil.php';
-} ?>
-<?php include 'vue/footer.php' ?>
+  include 'controleur/index.php';
+}
+
+
+include 'vue/footer.php';
+?>

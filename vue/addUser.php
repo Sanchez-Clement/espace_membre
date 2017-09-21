@@ -1,3 +1,5 @@
+
+
 <form class="col s12 m6 center" action="controleur/addUser_post.php" method="post" enctype="multipart/form-data">
   <div class="input-field">
 

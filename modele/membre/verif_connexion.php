@@ -1,3 +1,5 @@
+<!-- permet de verifier si pseudo est connu dans bdd -->
+
 <?php
 function connexion($pseudo){
   global $bdd;

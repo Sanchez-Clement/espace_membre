@@ -1,5 +1,5 @@
 <?php
-
+// ajoute utilisateur dans bdd
 
 function insert_user($pseudo,$passw,$mail,$signature) {
   global $bdd;
@@ -14,7 +14,7 @@ function insert_user($pseudo,$passw,$mail,$signature) {
   ));
 
 }
-
+// ajojute avatar lié à utilisateur dans bdd
 function insert_avatar($nom_image,$source) {
   global $bdd;
   $req = $bdd->prepare('INSERT INTO avatar (id_membre, nom_image, source) VALUES(:id_membre, :nom_image, :source)');
